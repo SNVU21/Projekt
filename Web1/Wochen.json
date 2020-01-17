@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "thema": "Wiso",
+    "dozent": "Andreas",
+    "raum": "101a"
+  },
+  {
+    "id": 2,
+    "thema": "Betriebssysteme",
+    "dozent": "Dr. Neumann",
+    "raum": "101a"
+  },
+  {
+    "id": 3,
+    "thema": "Englisch",
+    "dozent": "Mr Ukraine",
+    "raum": "101a"
+  },
+  {
+    "id": 4,
+    "thema": "Datensicherheit",
+    "dozent": "methodisch didaktischer Knaller Dozent",
+    "raum": "101a"
+  },
+  {
+    "id": 5,
+    "thema": "Spanisch",
+    "dozent": "Andi",
+    "raum": "101a"
+  }
+]

@@ -1,0 +1,147 @@
+﻿@page
+@model WeekModel
+@{
+    ViewData["Title"] = "Wochenübersicht";
+    var weeks = Model.Weeks.ToList();
+    var CurrentMonth = DateTime.Now.ToString("MMMM") +" "+ DateTime.Today.ToString("yyyy");
+    DateTime erster = new DateTime(2020, 1, 1);
+    DateTime start = erster.AddDays((7 * (weeks[0].id - 1)) + 5);
+    DateTime end = start.AddDays(4);
+}
+<style>
+    td {
+        height: 40px;
+        width: 80px;
+        padding: 50px;
+        margin: 50px auto;
+        border: 3px solid gray;
+        border-radius: 10px;
+        font-size: 24px;
+        text-align: center;
+     }
+</style>
+<h1>@ViewData["Title"]</h1>
+
+<p>Übersicht der Wochen vom @CurrentMonth</p>
+<table class="myTable" id="myTable" runat="server">
+    <tr>
+        <th></th>
+        <th>Montag</th>
+        <th>Dienstag</th>
+        <th>Mittwoch</th>
+        <th>Donnerstag</th>
+        <th>Freitag</th>
+    </tr>
+    <tr>
+        <th>Von @start.ToString("dd/MM"). bis @end.ToString("dd/MM").</th>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[0].Thema) <br />  @Html.Label("t1", @weeks[0].Dozent) <br />  @Html.Label("t1", @weeks[0].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[0].Thema) <br />  @Html.Label("t1", @weeks[0].Dozent) <br />  @Html.Label("t1", @weeks[0].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[0].Thema) <br />  @Html.Label("t1", @weeks[0].Dozent) <br />  @Html.Label("t1", @weeks[0].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[4].Thema) <br />  @Html.Label("t1", @weeks[4].Dozent) <br />  @Html.Label("t1", @weeks[4].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[0].Thema) <br />  @Html.Label("t1", @weeks[0].Dozent) <br />  @Html.Label("t1", @weeks[0].Raum)
+            </label>
+        </td>
+
+    <tr>
+        <th>Von @start.AddDays(7).ToString("dd/MM"). bis @end.AddDays(7).ToString("dd/MM").</th>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[1].Thema) <br />  @Html.Label("t1", @weeks[1].Dozent) <br />  @Html.Label("t1", @weeks[1].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[1].Thema) <br />  @Html.Label("t1", @weeks[1].Dozent) <br />  @Html.Label("t1", @weeks[1].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[1].Thema) <br />  @Html.Label("t1", @weeks[1].Dozent) <br />  @Html.Label("t1", @weeks[1].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[1].Thema) <br />  @Html.Label("t1", @weeks[1].Dozent) <br />  @Html.Label("t1", @weeks[1].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[1].Thema) <br />  @Html.Label("t1", @weeks[1].Dozent) <br />  @Html.Label("t1", @weeks[1].Raum)
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <th>Von @start.AddDays(14).ToString("dd/MM"). bis @end.AddDays(14).ToString("dd/MM").</th>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[2].Thema) <br />  @Html.Label("t1", @weeks[2].Dozent) <br />  @Html.Label("t1", @weeks[2].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[2].Thema) <br />  @Html.Label("t1", @weeks[2].Dozent) <br />  @Html.Label("t1", @weeks[2].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[2].Thema) <br />  @Html.Label("t1", @weeks[2].Dozent) <br />  @Html.Label("t1", @weeks[2].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[2].Thema) <br />  @Html.Label("t1", @weeks[2].Dozent) <br />  @Html.Label("t1", @weeks[2].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[2].Thema) <br />  @Html.Label("t1", @weeks[2].Dozent) <br />  @Html.Label("t1", @weeks[2].Raum)
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <th>Von @start.AddDays(21).ToString("dd/MM"). bis @end.AddDays(21).ToString("dd/MM").</th>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[3].Thema) <br />  @Html.Label("t1", @weeks[3].Dozent) <br />  @Html.Label("t1", @weeks[3].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[3].Thema) <br />  @Html.Label("t1", @weeks[3].Dozent) <br />  @Html.Label("t1", @weeks[3].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[3].Thema) <br />  @Html.Label("t1", @weeks[3].Dozent) <br />  @Html.Label("t1", @weeks[3].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[3].Thema) <br />  @Html.Label("t1", @weeks[3].Dozent) <br />  @Html.Label("t1", @weeks[3].Raum)
+            </label>
+        </td>
+        <td>
+            <label>
+                @Html.Label("t1", @weeks[3].Thema) <br />  @Html.Label("t1", @weeks[3].Dozent) <br />  @Html.Label("t1", @weeks[3].Raum)
+            </label>
+        </td>
+    </tr>
+</table>
